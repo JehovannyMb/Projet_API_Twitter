@@ -6,7 +6,7 @@ const port = 3000;
 
 
 app.get('/',(req,res)=>{
-    res.send('Page principale, test')
+    res.send('Page principale, test ')
 })
 
 
