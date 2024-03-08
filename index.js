@@ -1,22 +1,19 @@
 const express = require('express')
 const ejs = require('ejs')
-
-
 const app = express();
 const router = express.Router()
 const port = 3000;
 
 
 app.get('/',(req,res)=>{
-    res.send('Page principale')
+    res.send('Page principale, test')
 })
 
 
-app.post('/:id',(req,res, next)=>{
+app.post('/:id',(req,res)=>{
     const from = req.id=' De Jehovanny '
     const to = req.id=' passe très bien'
     res.send('La méthode post'+from + ' ' +to)
-    next()
 })
 
 app.put('/',(req, res)=>{
@@ -28,9 +25,6 @@ app.delete('/',(req, res)=>{
 })
 
 
-// app.use((req,res, next)=>{
-//     res.send('/:d', body) next()
-// })
 app.listen(port,(req,res)=>{
     console.log('Serveur en marche')
 })
